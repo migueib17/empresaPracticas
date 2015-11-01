@@ -1,0 +1,49 @@
+
+block content
+  h1 #{title}
+  br
+
+  form(action="/enviar", method="post")
+    table.table.table-striped.table-bordered
+      tr
+        td  Empresa
+        
+	td  Alumno
+
+        td  Fecha Inicio
+
+        td Fecha Final
+
+        td Nota
+  
+      if (typeof tasks === "undefined")
+        tr
+          td
+      else
+        each task in tasks
+          tr
+            td #{task.name}
+            td #{task.category}
+            td #{task.dateEnterpriseStart}
+            td #{task.dateEnterpriseFinish}
+            td #{task.puntos}
+            td
+              input(type="checkbox", name="#{task.id}", value="#{!task.completed}", checked=task.completed)
+    button.btn(type="submit") Eliminar Empresas
+  hr
+  form.well(action="/addtask", method="post")
+    label Nombre Empresa:
+    input(name="name", type="textbox")
+    br
+    label Nombre Alumno:
+    input(name="category", type="textbox")
+    br
+    label Fecha Inicio:
+    input(name="dateEnterpriseStart",type="date")
+    label Fecha Final:
+    input(name="dateEnterpriseFinish",type="date")
+    br
+    label Puntuacion:
+    input(name="puntos",type="number" min="0" max="10")
+    br
+    button.btn(type="submit") Añadir empresa

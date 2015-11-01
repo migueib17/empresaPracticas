@@ -1,0 +1,23 @@
+{
+  "name": "empresa",
+  "version": "1.0.0",
+  "description": "ejercicio IV",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~2.5.8",
+    "jade": "~1.11.0",
+    "grunt": "~0.4.5",
+    "grunt-docco": "~0.4.0",
+    "docco": "~0.7.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvaro-gr/empresa-IV"
+  },
+  "author": "Alvaro Perez",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/alvaro-gr/empresa-IV/issues"
+  }
+}
