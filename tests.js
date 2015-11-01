@@ -1,9 +1,10 @@
-var assert=require("assert");
+var assert = require("assert");
+    prueba = require(__dirname+"/../server.js");
 
-app=require(__dirname+"server.js");
-
-describe('empresa', function(){
-        it( 'carga', function(){
-            assert(server, "Todo bien, corriendo");
-        });
+describe('Web', function(){
+describe('Carga', function(){
+it('Debe cargar el programa', function(){
+assert(prueba, "Cargado");
+});
+});
 });
